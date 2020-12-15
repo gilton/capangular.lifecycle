@@ -1,3 +1,6 @@
-<p>
-    Valor:  {{ valorInicial }}
- </p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    
+    <p>
+        Valor:  {{ valorInicial }}
+    </p>
+</form>

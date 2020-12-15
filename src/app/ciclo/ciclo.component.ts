@@ -8,6 +8,7 @@ import { AfterContentChecked,
   OnChanges, 
   OnDestroy, 
   OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-ciclo',
@@ -22,6 +23,10 @@ export class CicloComponent implements OnChanges, OnInit,
   
   constructor() {
     this.log("CicleComponent:Constructor");
+  }
+
+  onSubmit(form: NgForm) {
+    console.log(form.value)
   }
   
   ngOnChanges() {

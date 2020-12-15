@@ -11,6 +11,7 @@ import {
   Input, 
   SimpleChanges
 } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ AfterViewChecked,OnDestroy {
   deletarCiclo: boolean = false;
   showOff: boolean = false;
 
-  valorStr: string = ""
+  @Input() valorStr: string = ""
 
 
   constructor() {
@@ -37,7 +38,11 @@ AfterViewChecked,OnDestroy {
   toggle() {
     this.displayChild=!this.displayChild;
   }
-  
+
+  onSubmit(form: NgForm) {
+    console.log(form.value)
+  }
+
   ngOnChanges() {
     this.log("AppComponent:OnChanges");
   }

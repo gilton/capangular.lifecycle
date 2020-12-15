@@ -1,20 +1,22 @@
-<!--
+
 <div>
-  <span changeText>{{title}} funcionando perfeitamente!</span>
+  <span changeText>{{valorStr}} funcionando perfeitamente!</span>
 </div>
-<input [(ngModel)]= "Form.id"  name="Id">-->
+<!-- <input [(ngModel)]= "Form.id"  name="Id"> -->
 
 <h2>Life Cycle Hook</h2>
 <button (click)="toggle()">Hide/Show Child </button>
 <app-child *ngIf="displayChild" [message]="'Hello'">123</app-child>
 
 <hr>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+  <app-ciclo [valorInicial]= valor *ngIf="!deletarCiclo"></app-ciclo>
+  
+  <button (click)="mudarValor()">+</button>
+  <button (click)="destruirCiclo()">deletar</button>
 
-<app-ciclo [valorInicial]= valor *ngIf="!deletarCiclo"></app-ciclo>
-
-<button (click)="mudarValor()">+</button>
-<button (click)="destruirCiclo()">deletar</button>
-
+</form>
+  
 <hr>
 
 <p>
