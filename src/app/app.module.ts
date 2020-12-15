@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChangeTextDirective } from './shared/directives/change-text.directive';
 import { ChildComponent } from './child/child.component';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChangeTextDirective,
-    ChildComponent
+    ChildComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,
